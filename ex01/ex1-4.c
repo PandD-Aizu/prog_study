@@ -1,3 +1,7 @@
+/*
+ * 二点間のユークリッド距離を求めよ
+ */
+
 #include <stdio.h>
 #include <math.h>
 
