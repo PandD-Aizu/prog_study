@@ -1,10 +1,6 @@
 #include <stdio.h>
 
-int RectAngle(int x, int y) {
-    int size = x * y;
-    if (size < 0) size = -1;
-    return size;
-}
+int RectAngle(int, int);
 
 int main() {
     printf("長方形の横の長さを入力してください> ");
@@ -18,6 +14,11 @@ int main() {
     int size = RectAngle(x, y);
     if (size == -1) printf("長さが適切ではありません。\n");
     else printf("面積は%dです。\n", size);
+}
+
+int RectAngle(int x, int y) {
+    if (x < 0 || y < 0) return -1;
+    else return x * y;
 }
 
 /*
