@@ -29,17 +29,17 @@ double getDisp(struct Student s) {
 }
 
 int main() {
-    struct Student s;
+    struct Student student;
     printf("英語の点数を入力してください> ");
-    scanf("%d", &s.english);
+    scanf("%d", &student.english);
 
     printf("数学の点数を入力してください> ");
-    scanf("%d", &s.math);
+    scanf("%d", &student.math);
 
     printf("国語の点数を入力してください> ");
-    scanf("%d", &s.japanese);
+    scanf("%d", &student.japanese);
 
-    printf("平均: %lf, 分散: %lf\n", getAverage(s), getDisp(s));
+    printf("平均: %lf, 分散: %lf\n", getAverage(student), getDisp(student));
 }
 
 /* 
