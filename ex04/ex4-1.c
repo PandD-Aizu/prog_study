@@ -4,11 +4,11 @@
 
 #include <stdio.h>
 
-struct Student {
+typedef struct{
     int english;
     int math;
     int japanese;
-};
+} Student;
 
 // a - bの二乗を返す関数
 double getPow(double a, double b) {
@@ -17,19 +17,19 @@ double getPow(double a, double b) {
 
 // int型同士の割り算でdoubleを返すには、doubleへのキャストが必要です！
 // (第一回勉強会資料を参照してください)
-double getAverage(struct Student s) {
+double getAverage(Student s) {
     return (double)(s.english + s.math + s.japanese) / (double)3;
 }
 
 // 分散は偏差の二乗の平均をとります
 // 偏差は値ー平均です。（どうせ二乗するので平均ー値でも大丈夫です）
-double getDisp(struct Student s) {
+double getDisp(Student s) {
     double ave = getAverage(s);
     return (getPow(ave, s.english) + getPow(ave, s.math) + getPow(ave, s.japanese)) / (double)3;
 }
 
 int main() {
-    struct Student student;
+    Student student;
     printf("英語の点数を入力してください> ");
     scanf("%d", &student.english);
 
@@ -40,6 +40,8 @@ int main() {
     scanf("%d", &student.japanese);
 
     printf("平均: %lf, 分散: %lf\n", getAverage(student), getDisp(student));
+
+    return 0;
 }
 
 /* 
