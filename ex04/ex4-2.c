@@ -15,6 +15,7 @@ int main() {
 
     // Pointを入力
     for(int i=0; i<4; i++) {
+        printf("%dつめの点の座標＞",i+1);
         scanf("%lf%lf", &path[i].x, &path[i].y);
     }
 
@@ -27,5 +28,5 @@ int main() {
         sum += length;
     }
 
-    printf("経路は%f", sum);
+    printf("経路の長さは%f", sum);
 }
